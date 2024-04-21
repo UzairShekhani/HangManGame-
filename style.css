@@ -7,3 +7,13 @@
 body{
     background-color: #f4cf31;
 }
+.container{
+    font-size: 16px;
+    background-color: #ffff;
+    width: 90vw;
+    padding: 3em;
+    max-width: 34em;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    
+}
