@@ -38,4 +38,14 @@ let Count = 0;
 
 let chosenWord = "";
 
+const displayOption = () => {
+    optionContainer.innerHTML += '<h3>Please Select An Option</h3>'
+
+    let buttonCon = document.createElement("div")
+    for(let value in option){
+        buttonCon.innerHTML += `<button class = "option" onclick="generateWord(${value})">${value}</button>`
+    }
+    optionContainer.appendChild(buttonCon)
+};
+
 
