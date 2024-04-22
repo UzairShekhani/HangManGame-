@@ -19,6 +19,41 @@ body{
     left: 50%;
     border-radius: 0.6em;
     box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
-
+}
+#option-container{
+    text-align: center;
+}
+#option-container div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+}
+#option-container button{
+    padding: 0.6em 1.2em;
+    border: 3px solid black;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+}
+#option-container button:disabled{
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+}
+#option-container button.active{
+    background-color: #f4cf31;
+    border: 3px solid black;
+    color: black;
+}
+.letter-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+}
+#letter-container button{
+    height: 2.4em;
+    width: 2.4em;
     
 }
