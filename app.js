@@ -78,10 +78,37 @@ const initializer = () => {
     winCount = 0;
     Count = 0;
 
+
+    userInputSection.innerHTML = ""
+    optionContainer.innerHTML = ""
+    letterContainer.classList.add("hide")
+    newGameContainer.classList.add("hide")
+    letterContainer.innerHTML = ""
+    
+
     for (let i = 65; i < 91; i++) {
         let button = document.createElement("button");
         button.classList.add("letters");
         button.innerText = String.fromCharCode(i);
+        
+        button.addEventListener("click",() => {
+            let charArray  = chosenWord.split("")
+            let dashes = document.getElementsByClassName("dashes")
+
+            if(charArray.includes(button.innerText)){
+                charArray.forEach((char,index) => {
+                    if(char === button.innerText){
+                        dashes[index].innerText = char;
+                        winCount += 1
+                        if(winCount === charArray.length){
+                            resultText.innerText = `<h2 class="win-msg">you win!!</h2><p>The word was <span>${chosenWord}</span> </p>`
+                        
+                            blocker();
+                        }
+                    }
+                })
+            }
+        })
         letterContainer.append(button);
     }
 

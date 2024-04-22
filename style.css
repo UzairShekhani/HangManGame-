@@ -75,5 +75,11 @@ body{
     display: none;
 }
 #user-input-section{
-    
+    /* display: flex; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    margin: 0.6em 0 1.2em ;
+
 }
