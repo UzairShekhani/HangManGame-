@@ -55,5 +55,25 @@ body{
 #letter-container button{
     height: 2.4em;
     width: 2.4em;
+    border-radius: 0.3em;
+    background-color: #fff;
+}
+.new-game-popup{
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.6em;
+}
+.hide{
+    display: none;
+}
+#user-input-section{
     
 }

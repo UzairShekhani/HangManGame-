@@ -57,7 +57,20 @@ const generateWord = (optionValue) => {
             button.classList.add("active")
         }
         button.disabled = true
-    })
+    });
+
+    letterContainer.classList.remove("hide");
+    userInputSection.innerText = ""
+
+    let optionArray = options[optionValue]
+
+    chosenWord = optionArray[Math.floor(Math.random() * optionArray.length )]
+    chosenWord = chosenWord.toUpperCase()
+    console.log(chosenWord);
+    
+    let displayItem = chosenWord.replace(/./g, '<span class="dashes"> _ </span>')
+
+    userInputSection.innerHTML = displayItem
 }
 
 
@@ -75,6 +88,22 @@ const initializer = () => {
     displayOption();
 };
 
+const blocker = () => {
+    let optionsButtons = document.querySelectorAll(".option")
+
+    let letterButton = document.querySelectorAll(".letters")
+
+    optionsButtons.forEach(button => {
+        button.disabled = true
+    });
+
+    letterButton.forEach((button) => {
+        button.disabled.true;
+    });
+
+    newGameContainer.classList.remove("hide")
+
+}
 
 newGameButton.addEventListener("click", initializer);
 window.onload = initializer;
