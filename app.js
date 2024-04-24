@@ -211,13 +211,14 @@ const canvasCreator = () => {
 const drawMan = (count) => {
   let { head, body, leftArm, rightArm, leftLeg, rightLeg } = canvasCreator();
   switch (count) {
+    
     case 1:
       head();
       break;
 
     case 2:
       body();
-      
+
       break;
     case 3:
       leftArm();
