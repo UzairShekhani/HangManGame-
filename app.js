@@ -214,8 +214,10 @@ const drawMan = (count) => {
     case 1:
       head();
       break;
+
     case 2:
       body();
+      
       break;
     case 3:
       leftArm();
